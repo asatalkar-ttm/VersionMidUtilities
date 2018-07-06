@@ -1,6 +1,7 @@
 package otap;
 
 import java.io.DataOutputStream;
+import java.io.File;
 import java.io.FileOutputStream;
 
 public class App
@@ -40,6 +41,7 @@ public class App
     {
         AppArgs appArgs = new AppArgs(args);
         String filePath=DSNLISTFILEPATH+"\\Binaries\\";
+        new File(filePath).mkdir();
 
         // https://confluence.tekla.com/display/PNETTECH/MID+210%3A+OBC+Services+BLOB+OBC+to+PFM
         // https://confluence.tekla.com/display/PNETTECH/MID+216%3A+Return+ICAP+ROM+Version
