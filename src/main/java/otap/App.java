@@ -3,8 +3,9 @@ package otap;
 import java.io.DataOutputStream;
 import java.io.FileOutputStream;
 
-public class App 
+public class App
 {
+    static String DSNLISTFILEPATH = System.getProperty("user.dir").replace("\\", "\\\\");
     /*
     let updateTypeAndVersionParser = new Parser()
         .endianess('big')
@@ -38,6 +39,7 @@ public class App
     public static void main( String[] args ) throws Exception
     {
         AppArgs appArgs = new AppArgs(args);
+        String filePath=DSNLISTFILEPATH+"\\Binaries\\";
 
         // https://confluence.tekla.com/display/PNETTECH/MID+210%3A+OBC+Services+BLOB+OBC+to+PFM
         // https://confluence.tekla.com/display/PNETTECH/MID+216%3A+Return+ICAP+ROM+Version
@@ -73,8 +75,8 @@ public class App
         int midHeaderMessageId = 210;
         int icapRomVersionMidHeaderMessageId = 216;
 
-        try (FileOutputStream fos = new FileOutputStream(appArgs.fileName);
-            DataOutputStream dos = new DataOutputStream(fos)) {
+        try (FileOutputStream fos = new FileOutputStream(filePath+appArgs.fileName);
+             DataOutputStream dos = new DataOutputStream(fos)) {
 
             dos.writeInt(appArgs.dsn);
             dos.writeShort(blobMidHeaderMidLength);
