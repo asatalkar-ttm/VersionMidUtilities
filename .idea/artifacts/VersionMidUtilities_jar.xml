@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="jar" name="VersionMidUtilities:jar">
-    <output-path>$PROJECT_DIR$</output-path>
-    <root id="archive" name="VersionMidUtilities.jar">
-      <element id="module-output" name="VersionMidUtilities" />
-    </root>
-  </artifact>
-</component>

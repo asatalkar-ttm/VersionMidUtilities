@@ -37,9 +37,9 @@ public class App
             length: 'icapRomVersionMidUpdateCount'
     })
      */
-    public static void main( String[] args ) throws Exception
+    public static void main( String[] arguments ) throws Exception
     {
-        AppArgs appArgs = new AppArgs(args);
+        AppArgs appArgs = new AppArgs(arguments);
         String filePath=DSNLISTFILEPATH+"\\Binaries\\";
         new File(filePath).mkdir();
 
